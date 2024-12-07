@@ -2,11 +2,13 @@ fn main() {
     let input_lines = INPUT.lines();
     let mut numbers: Vec<Vec<i32>> = Vec::new();
     for line in input_lines {
-        let line_numbers: Vec<i32> = line.split_whitespace().map(|s| s.parse::<i32>().unwrap()).collect();
+        let line_numbers: Vec<i32> = line
+            .split_whitespace()
+            .map(|s| s.parse::<i32>().unwrap())
+            .collect();
         numbers.push(line_numbers);
     }
 
-    
     let mut sum = 0;
     for line in numbers {
         let mut is_safe = true;
